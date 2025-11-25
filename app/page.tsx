@@ -1,10 +1,11 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
   return (
     <div className="w-full px-4 md:px-8 py-8 bg-white">
       {/* Hero Section - Inspired by Perplexity Comet */}
-      <div className="max-w-6xl mx-auto bg-[#F6F0E6] border border-[#E7DDCF] rounded-[3.5rem] px-8 py-16 md:px-20 md:py-24 shadow-[0_30px_60px_rgba(15,23,42,0.08)] relative overflow-hidden">
+      <div className="max-w-6xl mx-auto bg-[#F6F0E6] border border-[#E7DDCF] rounded-[3.5rem] px-8 py-6 md:px-20 md:py-12 shadow-[0_30px_60px_rgba(15,23,42,0.08)] relative overflow-hidden">
         <div className="absolute inset-x-[-15%] -top-24 h-56 bg-gradient-to-r from-[#0F6FD7]/30 via-[#38BDF8]/50 to-[#0EA5E9]/30 blur-3xl opacity-80 pointer-events-none rotate-2" />
         <div className="absolute inset-x-[-10%] top-0 h-64 bg-gradient-to-r from-[#0EA5E9]/40 via-[#0284C7]/50 to-[#0F6FD7]/30 blur-[100px] opacity-70 pointer-events-none -rotate-3" />
         <div className="absolute inset-x-[-20%] bottom-[-30%] h-72 bg-gradient-to-r from-[#0F6FD7]/30 via-[#38BDF8]/45 to-[#0EA5E9]/30 blur-[140px] opacity-70 pointer-events-none rotate-6" />
@@ -36,9 +37,44 @@ export default function Home() {
             </button>
           </div>
 
-          <p className="text-sm uppercase tracking-[0.3em] text-[#6B7280]">
-            Available for Web · macOS soon
+          <p className="text-sm uppercase tracking-[0.3em] text-[#6B7280]">Available for Web</p>
+        </div>
+      </div>
+
+      {/* Hero Visual Pairing */}
+      <div className="max-w-6xl mx-auto mt-16 grid md:grid-cols-[1.1fr_0.9fr] gap-10 items-center">
+        <div className="relative rounded-[2.5rem] overflow-hidden border border-[#E7DDCF] shadow-[0_20px_40px_rgba(15,23,42,0.08)]">
+          <Image
+            src="/frame-website-asset.jpg"
+            alt="Frame creative studio preview"
+            className="w-full h-auto object-cover"
+            width={1920}
+            height={1080}
+            priority
+          />
+        </div>
+        <div className="space-y-6">
+          <p className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.4em] uppercase text-[#0F172A]/60">
+            Live Studio Preview
           </p>
+          <h2 className="font-serif text-4xl md:text-5xl leading-tight text-[#0F172A]">See intent become output instantly.</h2>
+          <p className="text-lg text-[#4B5563] leading-relaxed">
+            Frame keeps your creative thinking tangible. Watch explorations render beside the conversation so you can steer the work without leaving flow state.
+          </p>
+          <ul className="space-y-3 text-[#0F172A]">
+            <li className="flex items-start gap-3">
+              <span className="mt-1 h-2 w-2 rounded-full bg-[#0F172A]" />
+              <span>Realtime collaboration between designers, directors, and AI.</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="mt-1 h-2 w-2 rounded-full bg-[#0F172A]" />
+              <span>Browser-scale canvas for moodboards, storyboards, and final frames.</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="mt-1 h-2 w-2 rounded-full bg-[#0F172A]" />
+              <span>Grounded in your intent with contextual prompts and design memory.</span>
+            </li>
+          </ul>
         </div>
       </div>
 
